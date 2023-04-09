@@ -1,10 +1,8 @@
 const express = require('express');
-//const req = require('express/lib/request');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const cors = require('cors');
-//const payment = require('../app/models/payment');
 
 app.use(cors());
 app.use(express.json());
@@ -24,7 +22,7 @@ app.use('/seminar', seminarRoute);
 app.use('/seat', seatRoute);
 app.use('/registration', registrationRoute);
 app.use("/", (req, res) => {
-    res.send("Welcome to Tugas 2 MCI by Akmal Ariq")
+    res.send("Welcome to Tugas 2 MCI by Akmal Ariq :D")
 })
 
 app.listen(port, () => console.log(`Port ${port} Started Successfully...`));
