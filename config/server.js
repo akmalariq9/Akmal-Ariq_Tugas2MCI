@@ -23,5 +23,8 @@ app.use('/speaker', speakerRoute);
 app.use('/seminar', seminarRoute);
 app.use('/seat', seatRoute);
 app.use('/registration', registrationRoute);
+app.use("/", (req, res) => {
+    res.send("Welcome to Tugas 2 MCI by Akmal Ariq")
+})
 
-app.listen(port, () => console.log(`Port ${port} Started...`));
+app.listen(port, () => console.log(`Port ${port} Started Successfully...`));
